@@ -110,9 +110,8 @@ def userProfile(request, pk):
     context = {'user': user, 'rooms': rooms, 'room_messages': room_messages,
                'topics': topics
                }
-
-
     return render(request, 'base/profile.html', context)
+
 
 @login_required(login_url='login')
 def createRoom(request):
